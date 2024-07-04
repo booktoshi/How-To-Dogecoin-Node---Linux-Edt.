@@ -9,25 +9,6 @@ sudo apt-get update
 ```sh 
 sudo apt-get upgrade
 ```
-**PRESS Y AND INSTALL MAINTAINER PACKAGES PROVIDED WHEN ASKED.**
-
-## Install Necessary Packages
-```sh
-sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
-```
-```sh 
-sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
-```
-```sh 
-sudo apt install libdb5.3++-dev libdb5.3++ libdb5.3-dev
-```
-```sh 
-sudo apt-get install libzmq3-dev
-```
-```sh 
-sudo apt-get install libminiupnpc-dev
-```
-
 ## Download and Install Dogecoin Binaries
 ```sh
 curl -L https://github.com/dogecoin/dogecoin/releases/download/v1.14.7/dogecoin-1.14.7-x86_64-linux-gnu.tar.gz | tar -xz
@@ -35,7 +16,6 @@ curl -L https://github.com/dogecoin/dogecoin/releases/download/v1.14.7/dogecoin-
 ```sh
 sudo mv dogecoin-1.14.7/bin/* /usr/local/bin/
 ```
-
 ## Start Dogecoin Node
 ```sh
 dogecoind -daemon
@@ -53,7 +33,6 @@ cd ~/.dogecoin/
 ```sh
 nano dogecoin.conf
 ```
-
 **Add the following configuration:**
 ```
 rpcuser=your
@@ -64,7 +43,6 @@ rpcport=22555
 server=1
 txindex=1
 ```
-
 ```sh
 ls
 ```
@@ -80,19 +58,28 @@ dogecoind -daemon
 # How to Set Up the ApeZord Doginal Inscriboor
 
 ## Install Node Version Manager (NVM) and Node.js
+
 ```sh
-sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+```
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
 ```sh
 source ~/.bashrc
 ```
 ```sh
-sudo nvm install stable
+nvm list-remote
+```
+```sh
+nvm install stable
 ```
 ```sh
 node -v
 ```
-
+```sh
+sudo apt install npm
+```
 ## Clone Doginals Repository and Install Dependencies
 ```sh
 git clone https://github.com/booktoshi/doginals.git
