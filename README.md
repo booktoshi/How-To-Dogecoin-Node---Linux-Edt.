@@ -5,6 +5,8 @@ by ~Booktoshi
 ## Update and Upgrade System
 ```sh
 sudo apt-get update
+```
+```sh 
 sudo apt-get upgrade
 ```
 **PRESS Y AND INSTALL MAINTAINER PACKAGES PROVIDED WHEN ASKED.**
