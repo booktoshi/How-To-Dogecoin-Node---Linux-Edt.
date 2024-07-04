@@ -14,15 +14,25 @@ sudo apt-get upgrade
 ## Install Necessary Packages
 ```sh
 sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
+```
+```sh 
 sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev
+```
+```sh 
 sudo apt install libdb5.3++-dev libdb5.3++ libdb5.3-dev
+```
+```sh 
 sudo apt-get install libzmq3-dev
+```
+```sh 
 sudo apt-get install libminiupnpc-dev
 ```
 
 ## Download and Install Dogecoin Binaries
 ```sh
 curl -L https://github.com/dogecoin/dogecoin/releases/download/v1.14.7/dogecoin-1.14.7-x86_64-linux-gnu.tar.gz | tar -xz
+```
+```sh
 sudo mv dogecoin-1.14.7/bin/* /usr/local/bin/
 ```
 
@@ -39,22 +49,30 @@ dogecoin-cli stop
 ## Configure Dogecoin
 ```sh
 cd ~/.dogecoin/
+```
+```sh
 nano dogecoin.conf
 ```
 
 **Add the following configuration:**
 ```
-rpcuser=book
-rpcpassword=toshi
+rpcuser=your
+rpcpassword=pass
 rpcallowip=127.0.0.1
 maxconnections=50
 rpcport=22555
 server=1
+txindex=1
 ```
 
 ```sh
-ls - to check that the file actually saved
+ls
+```
+to check that the file actually saved
+```sh
 cd
+```
+```sh
 dogecoind -daemon
 ```
 **Start node to let it sync.**
@@ -64,15 +82,25 @@ dogecoind -daemon
 ## Install Node Version Manager (NVM) and Node.js
 ```sh
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+```
+```sh
 source ~/.bashrc
+```
+```sh
 sudo nvm install stable
+```
+```sh
 node -v
 ```
 
 ## Clone Doginals Repository and Install Dependencies
 ```sh
 git clone https://github.com/booktoshi/doginals.git
+```
+```sh
 cd doginals
+```
+```sh
 sudo npm install
 ```
 
@@ -83,7 +111,7 @@ nano .env
 **Add the following configuration:**
 ```
 NODE_RPC_URL=http://127.0.0.1:22555
-NODE_RPC_USER=user
+NODE_RPC_USER=your
 NODE_RPC_PASS=pass
 TESTNET=false
 FEE_PER_KB=21000000
@@ -124,7 +152,11 @@ node . drc-20 mint DESpUq549VHcZTc27cRfE3DNAMfiwyk4W4 $wen 900
 ## Clone Dunes Repository and Install Dependencies
 ```sh
 git clone https://github.com/booktoshi/dunes-cli.git
+```
+```sh
 cd dunes-cli
+```
+```sh
 npm install
 ```
 
@@ -133,7 +165,8 @@ npm install
 nano .env
 ```
 **Add the following configuration:**
-```
+
+```sh
 PROTOCOL_IDENTIFIER=D
 NODE_RPC_USER=user
 NODE_RPC_PASS=pass
