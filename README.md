@@ -15,6 +15,9 @@ If UFW is not active, you will need to enable it:
 ```sh
 sudo ufw status
 ```
+```sh
+sudo ufw enable
+```
 Allow port 22555 for both TCP and UDP:
 ```sh
 sudo ufw allow 22555
