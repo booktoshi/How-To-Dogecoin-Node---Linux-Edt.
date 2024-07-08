@@ -9,23 +9,7 @@ sudo apt-get update
 ```sh 
 sudo apt-get upgrade
 ```
-## Open your 22555 Ports
 
-If UFW is not active, you will need to enable it:
-```sh
-sudo ufw status
-```
-```sh
-sudo ufw enable
-```
-Allow port 22555 for both TCP and UDP:
-```sh
-sudo ufw allow 22555
-```
-Verify the rule has been added:
-```sh
-sudo ufw status
-```
 ## Download and Install Dogecoin Binaries
 ```sh
 curl -L https://github.com/dogecoin/dogecoin/releases/download/v1.14.7/dogecoin-1.14.7-x86_64-linux-gnu.tar.gz | tar -xz
@@ -58,7 +42,6 @@ rpcallowip=127.0.0.1
 maxconnections=50
 rpcport=22555
 server=1
-txindex=1
 ```
 ```sh
 ls
